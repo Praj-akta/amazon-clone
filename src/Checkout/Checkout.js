@@ -21,7 +21,7 @@ export default function Checkout() {
 
       <div className="checkout-content">
         <div className="shopping-basket">
-          <h3> Hello, {user?.email} </h3>
+          <h3> Hello, {user ? user.email : "Guest"} </h3>
           <h2>
             {basket.length > 0 ? "Shopping Cart" : "Your Amazon cart is empty."}
           </h2>

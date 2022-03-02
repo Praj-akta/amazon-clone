@@ -34,7 +34,10 @@ function ShoppingList({ list }) {
                 </div>
                 <div className="regular-text"> Eligible for FREE Shipping</div>
               </div>
-              <button onClick={(_) => removeFromBasket(id)}>
+              <button
+                className="submit-btn"
+                onClick={(_) => removeFromBasket(id)}
+              >
                 Remove from basket
               </button>
             </div>
