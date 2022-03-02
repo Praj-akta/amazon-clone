@@ -1,5 +1,6 @@
 export const initialState = {
   basket: [],
+  user: null,
 };
 
 const reducer = (state = initialState, action) => {
@@ -16,6 +17,11 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         basket: modifiedBasket,
+      };
+    case "SET_USER":
+      return {
+        ...state,
+        user: action.data && action.data._delegate,
       };
     default:
       return state;

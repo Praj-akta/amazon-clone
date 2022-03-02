@@ -2,7 +2,7 @@ import React from "react";
 import { useStateValue } from "../StateProvider";
 
 function ShoppingList({ list }) {
-  const [state, dispatch] = useStateValue();
+  const [, dispatch] = useStateValue();
 
   const removeFromBasket = (id) => {
     dispatch({
