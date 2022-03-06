@@ -2,14 +2,11 @@ import React from "react";
 import "./Checkout.scss";
 import Subtotal from "./Subtotal";
 import ShoppingList from "./ShoppingList";
+import { getBasketTotal } from "../reducer";
 import { useStateValue } from "../StateProvider";
 
 export default function Checkout() {
   const [{ basket, user }] = useStateValue();
-  let totalPrice = 0;
-  if (basket.length > 0) {
-    basket.map(({ price }) => (totalPrice += parseInt(price)));
-  }
 
   return (
     <div className="checkout">
@@ -27,7 +24,10 @@ export default function Checkout() {
           </h2>
           {basket.length > 0 ? <ShoppingList list={basket} /> : null}
         </div>
-        <Subtotal itemsCount={basket.length} totalPrice={totalPrice} />
+        <Subtotal
+          itemsCount={basket.length}
+          totalPrice={getBasketTotal(basket)}
+        />
       </div>
     </div>
   );

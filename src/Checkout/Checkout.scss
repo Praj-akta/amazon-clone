@@ -2,9 +2,11 @@
   .checkout-ad {
     width: -webkit-fill-available;
     object-fit: cover;
+    margin: 15px 20px;
   }
   .checkout-content {
     display: flex;
+    margin: 0 20px;
     justify-content: space-between;
     .shopping-basket {
       flex: 1;
@@ -19,6 +21,7 @@
     }
     .subtotal {
       padding: 20px;
+      height: max-content;
       background: #fff;
       p {
         font-size: 18px;
@@ -44,50 +47,50 @@
       }
     }
   }
-  .shopping-list {
-    .shopping-cart-products {
+}
+.shopping-list {
+  .shopping-cart-products {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    margin: 20px 0;
+    flex-direction: row;
+    align-items: flex-start;
+    border-bottom: 1px solid #e4e4e4;
+
+    .product-image {
+      width: 150px;
+      height: 150px;
+      max-height: 150px;
+    }
+    .product-info {
       width: 100%;
-      padding: 0;
-      display: flex;
-      margin: 20px 0;
-      flex-direction: row;
-      align-items: flex-start;
-      border-bottom: 1px solid #e4e4e4;
+      height: auto;
+      padding-left: 20px;
 
-      .product-image {
-        width: 150px;
-        height: 150px;
-        max-height: 150px;
-      }
-      .product-info {
-        width: 100%;
-        height: auto;
-        padding-left: 20px;
-
-        .product-description {
-          display: flex;
-          font-size: 18px;
-          justify-content: space-between;
-          .title {
-            width: 80%;
-            color: #0f1111;
-            font-weight: bold;
-            margin-bottom: 10px;
-          }
-        }
-        .in-stock {
-          font-size: 14px;
-          color: #007600;
-          font-weight: 500;
-        }
-        .regular-text {
+      .product-description {
+        display: flex;
+        font-size: 18px;
+        justify-content: space-between;
+        .title {
+          width: 80%;
           color: #0f1111;
+          font-weight: bold;
+          margin-bottom: 10px;
         }
-        .in-stock,
-        .regular-text {
-          font-size: 14px;
-          margin-bottom: 5px;
-        }
+      }
+      .in-stock {
+        font-size: 14px;
+        color: #007600;
+        font-weight: 500;
+      }
+      .regular-text {
+        color: #0f1111;
+      }
+      .in-stock,
+      .regular-text {
+        font-size: 14px;
+        margin-bottom: 5px;
       }
     }
   }

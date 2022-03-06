@@ -24,7 +24,7 @@ function ShoppingList({ list }) {
                 <div className="title"> {title} </div>
                 <div className="product-price">
                   <small>$</small>
-                  <strong> {price.toLocaleString()} </strong>
+                  <strong>{price.toLocaleString()} </strong>
                 </div>
               </div>
               <div>
