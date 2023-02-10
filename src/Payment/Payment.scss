@@ -1,0 +1,40 @@
+.payment {
+  h1 {
+    padding: 10px;
+    font-weight: 400;
+    text-align: center;
+    border-bottom: 1px solid lightgray;
+  }
+  .payment-container {
+    background: #fff;
+    .payment_section {
+      display: flex;
+      padding: 20px;
+      margin: 0 20px;
+      border-bottom: 1px solid lightgray;
+      h3 {
+        flex: 0.2;
+      }
+      .delivery-address,
+      .payment-items,
+      .payment-details {
+        flex: 0.8;
+      }
+      .payment-details {
+        form {
+          max-width: 400px;
+        }
+        h3 {
+          margin: 10px 0 5px 0;
+        }
+        button {
+          width: 100%;
+          &:disabled {
+            opacity: 0.7;
+            cursor: no-drop;
+          }
+        }
+      }
+    }
+  }
+}

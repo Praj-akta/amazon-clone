@@ -1,0 +1,25 @@
+.orders {
+  margin: 20px 30px;
+  h1 {
+    margin-bottom: 10px;
+  }
+  .order {
+    padding: 20px 30px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    .submit-btn {
+      display: none;
+    }
+    .heading {
+      display: flex;
+      align-items: center;
+      padding-bottom: 10px;
+      justify-content: space-between;
+    }
+  }
+  .text-center {
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+  }
+}
